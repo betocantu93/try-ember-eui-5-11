@@ -1,7 +1,9 @@
-{{page-title "BrandNewApp"}}
+<EuiButton @color="orange">Hello</EuiButton>
 
-{{outlet}}
+<EuiIcon @type="faceHappy" />
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+<EuiPikaday @onSelection={{this.setDate}} @value={{this.date}} />
+<EuiText>
+  <p>The selected date is:
+    <EuiCode>{{this.date}}</EuiCode></p>
+</EuiText>
